@@ -33,7 +33,7 @@ $(document).ready(function () {
   var basicOption = {
     title: {
       display: true,
-      text: 'Temperature & Humidity Real-time Data',
+      text: 'Azure Temperature & Humidity Data',
       fontSize: 36
     },
     scales: {
@@ -60,6 +60,7 @@ $(document).ready(function () {
   //Get the context of the canvas element we want to select
   var ctx = document.getElementById("myChart").getContext("2d");
   var optionsNoAnimation = { animation: false }
+  Chart.defaults.global.defaultFontFamily = 'Helvetica, Arial, sans-serif';
   var myLineChart = new Chart(ctx, {
     type: 'line',
     data: data,
